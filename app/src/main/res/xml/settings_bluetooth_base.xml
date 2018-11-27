@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!-- <PreferenceScreen
+        android:summary="Импортированная системная настройка"
+        android:title="Настройка через намерение" >
+        <intent android:action="android.settings.ACTION_BLUETOOTH_SETTINGS" />
+    </PreferenceScreen>-->
+    <Preference android:title="Системная настройка">
+        <intent android:action="android.settings.BLUETOOTH_SETTINGS" />
+    </Preference>
+
+</PreferenceScreen>

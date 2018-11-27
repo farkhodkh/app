@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <EditTextPreference
+                android:key="@string/mode1tarif_key"
+                android:title="Режим №1"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode2tarif_key"
+                android:title="Режим №2"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode3tarif_key"
+                android:title="Режим №3"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode4tarif_key"
+                android:title="Режим №4"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode5tarif_key"
+                android:title="Режим №5"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode6tarif_key"
+                android:title="Режим №6"
+                android:summary="Изменить цену режима"
+                android:defaultValue="100"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Введите тариф" />
+
+</PreferenceScreen>

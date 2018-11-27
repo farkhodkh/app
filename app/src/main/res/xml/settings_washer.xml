@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Подключение машин"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_launcher">
+
+     <!--Количество устройств в прачечной -->
+    <ListPreference
+        android:key="@string/countwash_key"
+        android:title="Количество машин"
+        android:summary="Подключено'"
+        android:defaultValue="2"
+        android:entries="@array/count_machines"
+        android:entryValues="@array/count_machines_values"
+        android:dialogTitle="Устройств в прачечной" />
+    <!-- Режим запуска устройств -->
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Автоматизация машин"
+        android:icon="@drawable/icon_settings_base3">
+    <!-- Управлять стиральн по режимам -->
+
+        <ListPreference
+        android:key="@string/set_program_key"
+        android:title="Стиральная машина"
+        android:summary="Кнопка 'Start'"
+        android:defaultValue="1"
+        android:entries="@array/set_program"
+        android:entryValues="@array/set_program_value"
+        android:dialogTitle="Выбор режима автоматизации" />
+    <!-- Управлять сушильными машинами по режимам? -->
+    <ListPreference
+        android:key="@string/set_program_dryer_key"
+        android:title="Сушильная машина"
+        android:summary="Кнопка 'Start'"
+        android:defaultValue="1"
+        android:entries="@array/set_program_dryer"
+        android:entryValues="@array/set_program_dryer_value"
+        android:dialogTitle="Выбор режима автоматизации" />
+    </PreferenceCategory>
+    <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
+         design guidelines.
+
+    <Preference android:title="@string/pref_title_system_sync_settings">
+        <intent android:action="android.settings.SYNC_SETTINGS" />
+    </Preference>
+-->
+
+</PreferenceScreen>

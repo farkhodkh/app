@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Управлять сушильными машинами по режимам? -->
+    <ListPreference
+        android:key="@string/set_program_dryer_key"
+        android:title="@string/set_program_dryer_title"
+        android:summary="@string/set_program_dryer_summary"
+        android:defaultValue="1"
+        android:entries="@array/text_style_dry"
+        android:entryValues="@array/text_style_dry_values"
+        android:dialogTitle="@string/set_program_dryer_dialogTitle" />
+
+    <!-- УПРАВЛЕНИЕ МАШИНАМИ -->
+    <PreferenceCategory
+        android:title="@string/washsetting_title_key"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <!-- Установить сушку -->
+    <PreferenceScreen
+        android:key="@string/washerisdry_key"
+        android:title="Изменить машину на сушильную"
+        android:summary="Устанавливает машину в режим сушильной машины">
+        <CheckBoxPreference
+            android:key="@string/wash1isdry_key"
+            android:title="@string/wash1isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash2isdry_key"
+            android:title="@string/wash2isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash3isdry_key"
+            android:title="@string/wash3isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash4isdry_key"
+            android:title="@string/wash4isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash5isdry_key"
+            android:title="@string/wash5isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash6isdry_key"
+            android:title="@string/wash6isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash7isdry_key"
+            android:title="@string/wash7isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash8isdry_key"
+            android:title="@string/wash8isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash9isdry_key"
+            android:title="@string/wash9isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash10isdry_key"
+            android:title="@string/wash10isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash11isdry_key"
+            android:title="@string/wash11isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+        <CheckBoxPreference
+            android:key="@string/wash12isdry_key"
+            android:title="@string/wash12isdry_key_title"
+            android:summary="Устанавливает сушильную машину" />
+    </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

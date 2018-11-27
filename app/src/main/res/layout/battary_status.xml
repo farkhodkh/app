@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Уровень зарядки" />
+
+    <TextView
+        android:id="@+id/textViewVoltage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вольтаж:" />
+
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Температура:" />
+
+    <TextView
+        android:id="@+id/textViewTechology"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тип:" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статус:" />
+
+    <TextView
+        android:id="@+id/textViewHealth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Состояние:" />
+
+    <TextView
+        android:id="@+id/textViewCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Текущий уровень заряда:" />
+
+    <TextView
+        android:id="@+id/textViewCharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тип зарядки:" />
+
+    <ImageView
+        android:id="@+id/ImageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

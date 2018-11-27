@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <!-- Режим ремонта -->
+        <PreferenceScreen
+            android:key="@string/remont_key"
+            android:title="Перевести машину в режим ремонта"
+            android:summary="У клиента нет доступа к машине на время ремонта">
+
+            <SwitchPreference
+                android:key="@string/remont1_key"
+                android:summaryOff="Машина №1 - Работает"
+                android:summaryOn="Машина №1 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont2_key"
+                android:summaryOff="Машина №2 - Работает"
+                android:summaryOn="Машина №2 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont3_key"
+                android:summaryOff="Машина №3 - Работает"
+                android:summaryOn="Машина №3 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont4_key"
+                android:summaryOff="Машина №4 - Работает"
+                android:summaryOn="Машина №4 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont5_key"
+                android:summaryOff="Машина №5 - Работает"
+                android:summaryOn="Машина №5 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont6_key"
+                android:summaryOff="Машина №6 - Работает"
+                android:summaryOn="Машина №6 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont7_key"
+                android:summaryOff="Машина №7 - Работает"
+                android:summaryOn="Машина №7 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont8_key"
+                android:summaryOff="Машина №8 - Работает"
+                android:summaryOn="Машина №8 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont9_key"
+                android:summaryOff="Машина №9 - Работает"
+                android:summaryOn="Машина №9 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont10_key"
+                android:summaryOff="Машина №10 - Работает"
+                android:summaryOn="Машина №10 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont11_key"
+                android:summaryOff="Машина №11 - Работает"
+                android:summaryOn="Машина №11 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont12_key"
+                android:summaryOff="Машина №12 - Работает"
+                android:summaryOn="Машина №12 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+        </PreferenceScreen>
+
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:layout="@layout/sms_ka_logo"/>
+    <PreferenceCategory
+        android:title="СМС отчет: start_OK"
+        android:summary="Запуск машины">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/sms_director_notice_startOK_key"
+            android:title="СМС Директору"
+            android:summary="Настроить" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/sms_manager_notice_startOK_key"
+            android:title="СМС Менеджеру"
+            android:summary="Настроить"  />
+    </PreferenceCategory>
+
+</PreferenceScreen>

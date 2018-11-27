@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    // СИСТЕМНЫЕ НАСТРОЙКИ
+    <PreferenceCategory
+        android:title="Системные настройки" >
+        <CheckBoxPreference
+            android:key="autostart"
+            android:title="Автозагрузка приложения Лондри Плюс"
+            android:defaultValue="true"
+            android:summary="Включает приложение при старте или перезагрузке" />
+   <CheckBoxPreference
+            android:key="restart_error"
+            android:title="Рестарт приложения Лондри Плюс"
+            android:defaultValue="true"
+            android:summary="Авторестарт при ошибках и незаконных попытках выйти" />
+    <SwitchPreference
+        android:key="@string/systembar_key"
+        android:defaultValue="false"
+        android:summaryOff="@string/systembar_summaryOff"
+        android:summaryOn="@string/systembar_summaryOn"
+        android:switchTextOff="@string/systembar_switchTextOff"
+        android:switchTextOn="@string/systembar_switchTextOn" />
+    <SwitchPreference
+        android:key="@string/bigscreen_key"
+        android:summaryOff="@string/bigscreen_key_off"
+        android:summaryOn="@string/bigscreen_key_on"
+        android:switchTextOff="false"
+        android:switchTextOn="true"
+        android:defaultValue="false"/>
+    <SwitchPreference
+        android:key="@string/display_light"
+        android:summaryOff="Экономичная подсветка экрана, если питание от батареи через 2 мин гаснет"
+        android:summaryOn="Максимальная яркость, если питание от батареи никогда не гаснет"
+        android:switchTextOff="Нет"
+        android:switchTextOn="Да" />
+        <SwitchPreference
+            android:key="button_menu"
+            android:summaryOff="Включить переход в меню администратора по нажатию Volume Up|Down?"
+            android:summaryOn="Кнопка меню назначена на Volume Up|Down"
+            android:switchTextOff="Нет"
+            android:switchTextOn="Да" />
+
+    <EditTextPreference
+        android:key="licence_key"
+        android:title="Код лицензии программы"
+        android:summary="Введите код после полной оплаты оборудования по договору"
+        android:defaultValue="Demo licence - 30 days"
+        android:dialogTitle="Получить номер можно по тел. 8800-7003270" />
+</PreferenceCategory>
+
+
+</PreferenceScreen>

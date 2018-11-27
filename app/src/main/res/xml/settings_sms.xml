@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    // СМС НАСТРОЙКИ
+    <PreferenceCategory
+        android:title="Дополнительные опции"
+        android:icon="@drawable/ic_sync_black_24dp">
+
+    <EditTextPreference
+        android:key="@string/sms_manager_number_key"
+        android:title="@string/sms_manager_number_key_title"
+        android:summary="@string/sms_manager_number_key_summary"
+        android:defaultValue="@string/sms_manager_number_key_value"
+        android:dialogTitle="@string/sms_manager_number_key_title" />
+        <EditTextPreference
+            android:key="@string/sms_director_number_key"
+            android:title="@string/sms_director_number_key_title"
+            android:summary="@string/sms_director_number_key_summary"
+            android:defaultValue="@string/sms_director_number_key_value"
+            android:dialogTitle="@string/sms_director_number_key_dialogTitle" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="sms_admin_key"
+        android:summary="СМС отчеты о запусках и поломках машин"
+        android:title="Отправлять отчеты администратору"/>
+    <SwitchPreference
+        android:key="sms_client_key"
+        android:summaryOff="Уведомлять клиентов об окончании стирки?"
+        android:summaryOn="СМС оповещение для клиентов об окончании стирки"
+        android:switchTextOff="Нет"
+        android:switchTextOn="Да" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

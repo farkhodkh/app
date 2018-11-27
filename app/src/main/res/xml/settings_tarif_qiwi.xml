@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    // ЯНДЕКС ДЕНЬГИ
+    <PreferenceCategory
+        android:title="Принимать оплату из моб.кошельков и интернета"
+        android:icon="@drawable/ic_notifications_black_24dp">
+        <!-- Безналичка Яндекс.Деньги -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="qiwi_key"
+            android:icon="@drawable/icon_pay_internet"
+            android:title="Qiwi Vallet"
+            android:summary="Получать платежи"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="ymoney_key"
+            android:icon="@drawable/icon_creditcard"
+            android:title="Яндекс.Кошелек"
+            android:summary="Получать платежи"/>
+
+
+
+        <!-- Куда переводить платежи по безналу-->
+        <EditTextPreference
+            android:key="@string/sberbanktobeelinenumber_key"
+            android:title="@string/sberbanktobeelinenumber_title"
+            android:summary="@string/sberbanktobeelinenumber_summary"
+            android:defaultValue="+79626834090"
+            android:dialogTitle="@string/sberbanktobeelinenumber_dialogTitle" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

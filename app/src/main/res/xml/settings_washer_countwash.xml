@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+      <!-- Количество машин в прачечной -->
+        <EditTextPreference
+        android:key="@string/countwash_key"
+        android:title="@string/countwash_title"
+        android:summary="@string/countwash_summary"
+        android:defaultValue="2"
+        android:dialogTitle="@string/countwash_dialogTitle"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:numeric="integer"
+        android:phoneNumber="true"/>
+
+
+</PreferenceScreen>

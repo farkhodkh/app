@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Подключение машин"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_launcher">
+
+     <!--Количество устройств в прачечной -->
+    <ListPreference
+        android:key="@string/countdozator_key"
+        android:title="Количество устройств"
+        android:summary="Подключено'"
+        android:defaultValue="2"
+        android:entries="@array/count_dozators"
+        android:entryValues="@array/count_dozators_values"
+        android:dialogTitle="Устройств в прачечной" />
+    <!-- Режим запуска устройств -->
+    </PreferenceCategory>
+
+    <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
+         design guidelines.
+
+    <Preference android:title="@string/pref_title_system_sync_settings">
+        <intent android:action="android.settings.SYNC_SETTINGS" />
+    </Preference>
+-->
+
+</PreferenceScreen>

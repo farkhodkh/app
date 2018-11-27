@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!-- Валюта -->
+       <ListPreference
+          android:key="@string/valuta_key"
+          android:title="@string/valuta_title"
+          android:summary="@string/valuta_summary"
+          android:defaultValue="1"
+          android:entries="@array/valuta_style"
+          android:entryValues="@array/valuta_style_values"
+          android:dialogTitle="@string/valuta_dialogTitle" />
+        <!-- Управлять по режимам -->
+        <ListPreference
+        android:key="@string/set_program_key"
+        android:title="@string/set_program_title"
+        android:summary="@string/set_program_summary"
+        android:defaultValue="1"
+        android:entries="@array/text_style"
+        android:entryValues="@array/text_style_values"
+        android:dialogTitle="@string/set_program_dialogTitle" />
+      <!-- Количество машин в прачечной -->
+        <EditTextPreference
+        android:key="@string/countwash_key"
+        android:title="@string/countwash_title"
+        android:summary="@string/countwash_summary"
+        android:defaultValue="2"
+        android:dialogTitle="@string/countwash_dialogTitle"
+        android:inputType="number"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:numeric="integer"
+        android:phoneNumber="true"/>
+
+    <SwitchPreference
+        android:key="@string/bigscreen_key"
+        android:summaryOff="@string/bigscreen_key_off"
+        android:summaryOn="@string/bigscreen_key_on"
+        android:switchTextOff="false"
+        android:switchTextOn="true"
+        android:defaultValue="false"/>
+
+    <EditTextPreference
+        android:key="licence_key"
+        android:title="Код лицензии программы"
+        android:summary="Введите код после полной оплаты оборудования по договору"
+        android:defaultValue="Demo licence - 30 days"
+        android:dialogTitle="Получить номер можно по тел. 8800-7003270" />
+
+
+</PreferenceScreen>

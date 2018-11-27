@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+   <!-- <PreferenceScreen android:layout="@layout/yandex_logo"/> -->
+
+    <PreferenceCategory
+        android:title="@string/dozator_true_dialogTitle"
+        android:icon="@drawable/ic_notifications_black_24dp">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/dozator_true_key"
+            android:title="@string/dozator_true_summary" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

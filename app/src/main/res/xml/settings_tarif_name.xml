@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+      <!-- НАЗВАНИЕ 1 РЕЖИМА -->
+      <PreferenceScreen
+          android:key="@string/namemode1_key"
+          android:title="@string/name1mode_title"
+          android:summary="@string/time1mode_title" >
+          <EditTextPreference
+              android:key="@string/name1mode_key"
+              android:title="@string/name1mode_title"
+              android:summary="Изменить"
+              android:defaultValue="Быстрая"
+              android:icon="@drawable/icon_keyboard"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/time1mode_key"
+              android:title="@string/time1mode_title"
+              android:summary="Изменить"
+              android:defaultValue="30"
+              android:icon="@drawable/icon_sms_client"
+              android:dialogTitle="Введите минуты"/>
+
+
+  </PreferenceScreen>
+<!-- НАЗВАНИЕ 2 РЕЖИМА -->
+    <PreferenceScreen
+        android:key="@string/namemode2_key"
+        android:title="@string/name2mode_title"
+        android:icon="@drawable/ic_intensive"
+        android:summary="@string/time2mode_title">
+
+
+    <EditTextPreference
+        android:key="@string/name2mode_key"
+        android:title="@string/name2mode_title"
+        android:summary="Изменить"
+        android:defaultValue="Интенсивная"
+        android:dialogTitle="Введите название"
+        android:icon="@drawable/icon_keyboard"/>
+    <EditTextPreference
+        android:key="@string/time2mode_key"
+        android:title="@string/time2mode_title"
+        android:summary="Изменить"
+        android:defaultValue="120"
+        android:dialogTitle="Введите минуты"
+        android:icon="@drawable/icon_sms_client"/>
+</PreferenceScreen>
+<!-- НАЗВАНИЕ 3 РЕЖИМА -->
+    <PreferenceScreen
+        android:key="@string/namemode3_key"
+        android:title="@string/name3mode_title"
+        android:icon="@drawable/ic_cotton"
+        android:summary="@string/time3mode_title">
+       <!--  -->
+        <EditTextPreference
+            android:key="@string/name3mode_key"
+            android:title="@string/name3mode_title"
+            android:summary="Изменить"
+            android:defaultValue="Хлопок"
+            android:dialogTitle="Введите название"
+            android:icon="@drawable/icon_keyboard"/>
+        <EditTextPreference
+            android:key="@string/time3mode_key"
+            android:title="@string/time3mode_title"
+            android:summary="Изменить"
+            android:defaultValue="180"
+            android:dialogTitle="Введите минуты"
+            android:icon="@drawable/icon_sms_client"/>
+    </PreferenceScreen>
+    <!-- НАЗВАНИЕ 4 РЕЖИМА -->
+    <PreferenceScreen
+        android:key="@string/namemode4_key"
+        android:title="@string/name4mode_title"
+        android:icon="@drawable/ic_hand"
+        android:summary="@string/time4mode_title">
+        <!--  -->
+
+        <EditTextPreference
+            android:key="@string/name4mode_key"
+            android:title="@string/name4mode_title"
+            android:summary="Изменить"
+            android:defaultValue="Шерсть"
+            android:dialogTitle="Введите название"
+            android:icon="@drawable/icon_keyboard"/>
+        <EditTextPreference
+            android:key="@string/time4mode_key"
+            android:title="@string/time4mode_title"
+            android:summary="Изменить"
+            android:defaultValue="90"
+            android:dialogTitle="Введите минуты"
+            android:icon="@drawable/icon_sms_client"/>
+    </PreferenceScreen>
+    <!-- НАЗВАНИЕ 5 РЕЖИМА -->
+    <PreferenceScreen
+        android:key="@string/namemode5_key"
+        android:title="@string/name5mode_title"
+        android:icon="@drawable/ic_sintetics"
+        android:summary="@string/time5mode_title">
+        <!-- -->
+        <EditTextPreference
+            android:key="@string/name5mode_key"
+            android:title="@string/name5mode_title"
+            android:summary="Изменить"
+            android:defaultValue="Синтетика"
+            android:dialogTitle="Введите название"
+            android:icon="@drawable/icon_keyboard"/>
+        <EditTextPreference
+            android:key="@string/time5mode_key"
+            android:title="@string/time5mode_title"
+            android:summary="Изменить"
+            android:defaultValue="120"
+            android:dialogTitle="Введите минуты"
+            android:icon="@drawable/icon_sms_client"/>
+    </PreferenceScreen>
+    <!-- НАЗВАНИЕ 6 РЕЖИМА -->
+    <PreferenceScreen
+        android:key="@string/namemode6_key"
+        android:title="@string/name6mode_title"
+        android:icon="@drawable/ic_otjim"
+        android:summary="@string/time6mode_title">
+       <!--  -->
+        <EditTextPreference
+            android:key="@string/name6mode_key"
+            android:title="@string/name6mode_title"
+            android:summary="Изменить"
+            android:defaultValue="Полоскание"
+            android:dialogTitle="Введите название"
+            android:icon="@drawable/icon_keyboard"/>
+        <EditTextPreference
+            android:key="@string/time6mode_key"
+            android:title="@string/time6mode_title"
+            android:summary="Изменить"
+            android:defaultValue="17"
+            android:dialogTitle="Введите минуты"
+            android:icon="@drawable/icon_sms_client"/>
+    </PreferenceScreen>
+
+
+<!--
+          <EditTextPreference
+              android:key="@string/name2mode_key"
+              android:title="@string/name2mode_title"
+              android:summary="Изменить"
+              android:defaultValue="Интенсивная"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name3mode_key"
+              android:title="@string/name3mode_title"
+              android:summary="Изменить"
+              android:defaultValue="Хлопок"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name4mode_key"
+              android:title="@string/name4mode_title"
+              android:summary="Режим 4"
+              android:defaultValue="Шерсть"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name5mode_key"
+              android:title="@string/name5mode_title"
+              android:summary="Режим 5"
+              android:defaultValue="Синтетика"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name6mode_key"
+              android:title="@string/name6mode_title"
+              android:summary="Режим 6"
+              android:defaultValue="Полоскание"
+              android:dialogTitle="Введите название" />
+-->
+
+</PreferenceScreen>

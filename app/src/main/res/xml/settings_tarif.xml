@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+    <!-- ТАРИФЫ на МАШИНЫ -->
+  <PreferenceCategory
+      android:title="@string/washtarif_title_key"
+      android:icon="@drawable/ic_notifications_black_24dp">
+      <!-- Переход в раздел - меню установок тарифов -->
+        <PreferenceScreen
+            android:key="@string/washtarif_key"
+            android:title="Тарифы в прачечной"
+            android:summary="Установка тарифов на машины">
+            <EditTextPreference
+                android:key="@string/wash1tarif_key"
+                android:title="Машина №1"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash2tarif_key"
+                android:title="Машина №2"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash3tarif_key"
+                android:title="Машина №3"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash4tarif_key"
+                android:title="Машина №4"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash5tarif_key"
+                android:title="Машина №5"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash6tarif_key"
+                android:title="Машина №6"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash7tarif_key"
+                android:title="Машина №7"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash8tarif_key"
+                android:title="Машина №8"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash9tarif_key"
+                android:title="Машина №9"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash10tarif_key"
+                android:title="Машина №10"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash11tarif_key"
+                android:title="Машина №11"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/wash12tarif_key"
+                android:title="Машина №12"
+                android:summary="Изменить тариф"
+                android:defaultValue="0"
+                android:dialogTitle="Введите тариф" />
+        </PreferenceScreen>
+
+        <!-- Переход в раздел - тарифов за режимы стирки -->
+        <PreferenceScreen
+            android:key="@string/modetarif_key"
+            android:title="Тарифы в прачечной"
+            android:summary="Установка тарифов на режимы">
+            <EditTextPreference
+                android:key="@string/mode1tarif_key"
+                android:title="Режим №1"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode2tarif_key"
+                android:title="Режим №2"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode3tarif_key"
+                android:title="Режим №3"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode4tarif_key"
+                android:title="Режим №4"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode5tarif_key"
+                android:title="Режим №5"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+            <EditTextPreference
+                android:key="@string/mode6tarif_key"
+                android:title="Режим №6"
+                android:summary="Изменить тариф"
+                android:defaultValue="100"
+                android:dialogTitle="Введите тариф" />
+        </PreferenceScreen>
+
+      <!-- НАЗВАНИЯ РЕЖИМОВ
+      <PreferenceScreen
+          android:key="@string/namemode_key"
+          android:title="Названия режимов"
+          android:summary="Возможно редактирование названий">
+          <EditTextPreference
+              android:key="@string/name1mode_key"
+              android:title="Режим №1"
+              android:summary="Изменить режим"
+              android:defaultValue="Быстрая"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name2mode_key"
+              android:title="Режим №2"
+              android:summary="Изменить режим"
+              android:defaultValue="Интенсивная"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name3mode_key"
+              android:title="Режим №3"
+              android:summary="Изменить режим"
+              android:defaultValue="Хлопок"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name4mode_key"
+              android:title="Режим №4"
+              android:summary="Изменить режим"
+              android:defaultValue="Шерсть"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name5mode_key"
+              android:title="Режим №5"
+              android:summary="Изменить режим"
+              android:defaultValue="Синтетика"
+              android:dialogTitle="Введите название" />
+          <EditTextPreference
+              android:key="@string/name6mode_key"
+              android:title="Режим №6"
+              android:summary="Изменить режим"
+              android:defaultValue="Полоскание"
+              android:dialogTitle="Введите название" />
+      </PreferenceScreen>
+       -->
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

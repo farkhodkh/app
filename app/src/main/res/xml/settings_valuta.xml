@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:layout="@layout/valuta_logo"/>
+    <!-- Валюта -->
+    <ListPreference
+        android:key="@string/valuta_key"
+        android:title="@string/valuta_title"
+        android:summary="@string/valuta_summary"
+        android:icon="@drawable/icon_valuta3"
+        android:defaultValue="1"
+      android:negativeButtonText="Отмена"
+      android:positiveButtonText="Ок"
+      android:entries="@array/valuta_style"
+      android:entryValues="@array/valuta_style_values"
+      android:dialogTitle="@string/valuta_dialogTitle" />
+
+</PreferenceScreen>

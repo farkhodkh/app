@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="СМС отчет: 220v">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_director_notice_220v_key"
+            android:title="СМС Директору"
+            android:summary="Настроить"
+            android:icon="@drawable/action_bar_icon_electro" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_manager_notice_220v_key"
+            android:title="СМС Менеджеру"
+            android:summary="Настроить"
+            android:icon="@drawable/action_bar_icon_electro" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

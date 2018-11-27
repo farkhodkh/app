@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Количество устройств в прачечной -->
+    <ListPreference
+        android:key="@string/countwash_key"
+        android:title="Количество машин"
+        android:summary="Подключено'"
+        android:defaultValue="2"
+        android:entries="@array/count_machines"
+        android:entryValues="@array/count_machines_values"
+        android:dialogTitle="Устройств в прачечной" />
+    <!-- Режим запуска устройств -->
+    <PreferenceCategory
+        android:title="Автоматизация машин"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <!-- Управлять стиральн по режимам -->
+    <ListPreference
+        android:key="@string/set_program_key"
+        android:title="Стиральная машина"
+        android:summary="Кнопка 'Start'"
+        android:defaultValue="1"
+        android:entries="@array/set_program"
+        android:entryValues="@array/set_program_value"
+        android:dialogTitle="Выбор режима автоматизации" />
+    <!-- Управлять сушильными машинами по режимам? -->
+    <ListPreference
+        android:key="@string/set_program_dryer_key"
+        android:title="Сушильная машина"
+        android:summary="Кнопка 'Start'"
+        android:defaultValue="1"
+        android:entries="@array/set_program_dryer"
+        android:entryValues="@array/set_program_dryer_value"
+        android:dialogTitle="Выбор режима автоматизации" />
+    </PreferenceCategory>
+
+
+    <!--  <EditTextPreference
+  android:key="@string/countwash_key"
+  android:title="@string/countwash_title"
+  android:summary="@string/countwash_summary"
+  android:defaultValue="12"
+  android:dialogTitle="@string/countwash_dialogTitle"
+  android:inputType="number"
+  android:maxLength="2"
+  android:maxLines="1"
+  android:numeric="integer"
+  android:phoneNumber="true"/> -->
+
+
+<!-- УПРАВЛЕНИЕ МАШИНАМИ -->
+    <PreferenceCategory
+        android:title="Общие настройки машин"
+        android:icon="@drawable/ic_notifications_black_24dp">
+         <!-- Установить сушку -->
+        <PreferenceScreen
+            android:key="@string/washerisdry_key"
+            android:title="Изменить машину на сушильную"
+            android:summary="Устанавливает машину в режим сушильной машины">
+            <CheckBoxPreference
+                android:key="@string/wash1isdry_key"
+                android:title="@string/wash1isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash2isdry_key"
+                android:title="@string/wash2isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash3isdry_key"
+                android:title="@string/wash3isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash4isdry_key"
+                android:title="@string/wash4isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash5isdry_key"
+                android:title="@string/wash5isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash6isdry_key"
+                android:title="@string/wash6isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash7isdry_key"
+                android:title="@string/wash7isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash8isdry_key"
+                android:title="@string/wash8isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash9isdry_key"
+                android:title="@string/wash9isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash10isdry_key"
+                android:title="@string/wash10isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash11isdry_key"
+                android:title="@string/wash11isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+            <CheckBoxPreference
+                android:key="@string/wash12isdry_key"
+                android:title="@string/wash12isdry_key_title"
+                android:summary="Устанавливает сушильную машину" />
+        </PreferenceScreen>
+
+        <!-- Режим ремонта -->
+        <PreferenceScreen
+            android:key="@string/remont_key"
+            android:title="Перевести машину в режим ремонта"
+            android:summary="У клиента нет доступа к машине на время ремонта">
+
+            <SwitchPreference
+                android:key="@string/remont1_key"
+                android:summaryOff="Машина №1 - Работает"
+                android:summaryOn="Машина №1 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont2_key"
+                android:summaryOff="Машина №2 - Работает"
+                android:summaryOn="Машина №2 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont3_key"
+                android:summaryOff="Машина №3 - Работает"
+                android:summaryOn="Машина №3 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont4_key"
+                android:summaryOff="Машина №4 - Работает"
+                android:summaryOn="Машина №4 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont5_key"
+                android:summaryOff="Машина №5 - Работает"
+                android:summaryOn="Машина №5 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont6_key"
+                android:summaryOff="Машина №6 - Работает"
+                android:summaryOn="Машина №6 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont7_key"
+                android:summaryOff="Машина №7 - Работает"
+                android:summaryOn="Машина №7 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont8_key"
+                android:summaryOff="Машина №8 - Работает"
+                android:summaryOn="Машина №8 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont9_key"
+                android:summaryOff="Машина №9 - Работает"
+                android:summaryOn="Машина №9 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont10_key"
+                android:summaryOff="Машина №10 - Работает"
+                android:summaryOn="Машина №10 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont11_key"
+                android:summaryOff="Машина №11 - Работает"
+                android:summaryOn="Машина №11 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+            <SwitchPreference
+                android:key="@string/remont12_key"
+                android:summaryOff="Машина №12 - Работает"
+                android:summaryOn="Машина №12 - Ремонт"
+                android:switchTextOff="Да"
+                android:switchTextOn="Да" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+
+    // ДОП.ОПЦИИ
+    <PreferenceCategory
+        android:title="Дополнительные опции"
+        android:icon="@drawable/ic_sync_black_24dp">
+        <!-- Проверка датчиков -->
+        <SwitchPreference
+            android:key="@string/checkdoor_key"
+            android:defaultValue="true"
+            android:summaryOff="@string/checkdoor_summary_off"
+            android:summaryOn="@string/checkdoor_summary_on"
+            android:switchTextOff="Нет"
+            android:switchTextOn="Да" />
+        <SwitchPreference
+            android:key="@string/checkwater_key"
+            android:summaryOff="@string/checkwater_summary_off"
+            android:summaryOn="@string/checkwater_summary_on"
+            android:switchTextOff="Нет"
+            android:defaultValue="false"
+            android:switchTextOn="Да" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout="@layout/support_simple_spinner_dropdown_item">
+    <PreferenceScreen android:layout="@layout/director_logo"/>
+    <EditTextPreference
+        android:key="@string/sms_manager_number_key"
+        android:title="@string/sms_manager_number_key_title"
+        android:summary="@string/sms_manager_number_key_summary"
+        android:defaultValue="@string/sms_manager_number_key_value"
+        android:dialogTitle="@string/sms_manager_number_key_dialogTitle" />
+    <SwitchPreference
+        android:key="@string/sms_manager_notice_key"
+        android:title="Отправка отчетов"
+        android:summaryOff="Отключена"
+        android:summaryOn="Включена"
+        android:switchTextOff="Нет"
+        android:switchTextOn="Да" />
+
+</PreferenceScreen>

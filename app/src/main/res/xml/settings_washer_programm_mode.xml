@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+      <!-- Управлять по режимам -->
+        <ListPreference
+        android:key="@string/set_program_key"
+        android:title="@string/set_program_title"
+        android:summary="@string/set_program_summary"
+        android:defaultValue="1"
+        android:entries="@array/text_style"
+        android:entryValues="@array/text_style_values"
+        android:dialogTitle="@string/set_program_dialogTitle" />
+
+
+</PreferenceScreen>

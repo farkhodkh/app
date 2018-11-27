@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+                <PreferenceScreen android:layout="@layout/sms_client_form_light"/>
+                <SwitchPreference
+                    android:key="@string/notice_wash1_key"
+                    android:defaultValue="false"
+                    android:title="Отчет о завершении стирки"
+                    android:summaryOff="Отключено"
+                    android:summaryOn="Отправить" />
+                <EditTextPreference android:icon="@drawable/icon_number_director"
+                    android:key="@string/smsnumber_client1_key"
+                    android:title="Номер телефона"
+                    android:summary="Изменить"
+                    android:dialogTitle="Напишите номер в международном формате:"
+                    android:defaultValue="@string/smsnumber_client_default"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:dependency="@string/notice_wash1_key"/>
+</PreferenceScreen>

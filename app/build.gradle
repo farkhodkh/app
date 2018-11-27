@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'Intelligent683'
+            storeFile file('C:/keystores/android.jks')
+            storePassword 'Intelligent683'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId "ru.laundryplus.washer"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 3
+        versionName '3.0'
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile project(':material')
+    compile files('libs/RootTools2.6.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.yandex.android:speechkit:2.5.0'
+    compile 'com.yandex.money.api:yandex-money-sdk-android:3.1.5'
+    compile 'com.android.support:support-v4:23.4.0'
+}

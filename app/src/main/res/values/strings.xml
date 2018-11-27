@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string name="device_admin">Kiosk Mode Demo</string>
+    <string name="device_admin_description">Kiosk Mode Demo</string>
+
+    <string name="rd_repeat">Repeat</string>
+    <string name="rd_daily">Daily</string>
+    <string name="rd_weekly">Weekly</string>
+    <string name="rd_monthly">Monthly</string>
+    <string name="rd_yearly">Yearly</string>
+    <string name="rd_none">None</string>
+    <string name="rd_every">Every</string>
+    <string name="rd_day">day</string>
+    <string name="rd_days">days</string>
+    <string name="rd_week">week</string>
+    <string name="rd_weeks">weeks</string>
+    <string name="rd_month">month</string>
+    <string name="rd_months">months</string>
+    <string name="rd_year">year</string>
+    <string name="rd_years">years</string>
+    <string name="rd_forever">Forever</string>
+    <string name="rd_until">Until</string>
+    <string name="rd_until_full">Until a date</string>
+    <string name="rd_for">For</string>
+    <string name="rd_for_full">For a number of events</string>
+    <string name="rd_month_same_day">on the same day each month</string>
+    <string name="rd_month_last">on every last %s</string>
+    <string name="rd_month_first">on every first %s</string>
+    <string name="rd_month_second">on every second %s</string>
+    <string name="rd_month_third">on every third %s</string>
+    <string name="rd_month_fourth">on every fourth %s</string>
+    <string name="rd_event">event</string>
+    <string name="rd_events">events</string>
+
+    <string name="my_keyboard">Laundry Keyboard</string>
+    <string name="sybtype_en_US">English (US)</string>
+
+    <string name="app_name">Laundromat.ru</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <!--<string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>-->
+    <string name="bt_not_enabled_leaving">Connection was unknown attacked.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to <xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings-->
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_title_machines">Основные настройки</string>
+    <string name="settings_title_machines1">Детальная настройка 1 машины</string>
+    <string name="settings_title_machines2">Детальная настройка 2 машины</string>
+
+
+    <string name="valuta_key">valuta_key</string>
+    <string name="valuta_title">Настройка валюты</string>
+    <string name="valuta_summary">Устанавливает купюроприемник в режим приема другой валюты</string>
+    <string name="valuta_dialogTitle">Выберите валюту</string>
+
+    <string name="valuta_1_key">Валюта1</string>
+    <string name="valuta_2_key">Валюта2</string>
+    <string name="valuta_3_key">Валюта3</string>
+    <string name="valuta_4_key">Валюта4</string>
+
+    <string name="creditcard_key">Карта</string>
+    <string name="creditcard_title">Безналичный прием платежей</string>
+    <string name="creditcard_summary">Оплата банковскими картами через сервис Яндекс.Деньги</string>
+    <string name="dialogTitle">Введите кол-во (от 1 до 12)</string>
+
+    <string name="dozator_true_key">Режим Дозатора</string>
+    <string name="dozator_true_title">Режим Дозатора</string>
+    <string name="dozator_true_summary">Дозирование постирочных моющих средств</string>
+    <string name="dozator_true_dialogTitle">Режим Дозатора</string>
+
+
+    <string name="sberbanktobeelinenumber_key">sberbanktobeelinenumber_key</string>
+    <string name="sberbanktobeelinenumber_title">SIM-карта Билайн!!! для моб.платежей</string>
+    <string name="sberbanktobeelinenumber_summary">Вставьте Сим-карту в терминал и запишите номер здесь</string>
+    <string name="sberbanktobeelinenumber_dialogTitle">Введите номер в международном формате (+71112223344)</string>
+
+
+    <string name="yandexmenu_title">Оплата банковскими картами</string>
+    <string name="moneycard_key">Активировать раздел Яндекс Кошелек</string>
+    <string name="creditcardnumber_key">Яндекс Кошелек</string>
+    <string name="creditcardnumber_title">Яндекс Кошелек</string>
+    <string name="creditcardnumber_summary">Добавить номер кошелька</string>
+    <string name="creditcardnumber_dialogTitle">Ваш счет в Яндекс.Кошельке</string>
+
+    <string name="countwash_key">countwash_key</string>
+    <string name="countdozator_key">countdozator_key</string>
+
+    <string name="countwash_title">Сколько машин?</string>
+    <string name="countwash_summary">Установить количество машин в прачечной</string>
+    <string name="countwash_dialogTitle">Введите кол-во (от 1 до 12)</string>
+
+
+    <string name="checkdoor_key">checkdoor_key</string>
+    <string name="checkdoor_summary_off">Проверка датчиков машин - Откл</string>
+    <string name="checkdoor_summary_on">Текущее состояние машин - Вкл</string>
+
+
+    <string name="valuta_kup_rub_key">valuta_kup_rub_key</string>
+    <string name="valuta_kup_eur_key">valuta_kup_eur_key</string>
+    <string name="valuta_kup_byr_key">valuta_kup_byr_key</string>
+    <string name="valuta_kup_kzt_key">valuta_kup_kzt_key</string>
+
+    <string name="valuta_mon_rub_key">valuta_mon_rub_key</string>
+    <string name="valuta_mon_eur_key">valuta_mon_eur_key</string>
+    <string name="valuta_mon_byr_key">valuta_mon_byr_key</string>
+    <string name="valuta_mon_kzt_key">valuta_mon_kzt_key</string>
+
+
+    <string name="washtarif_key">Тарифы</string>
+    <string name="washtarif_title_key">Тарифы</string>
+    <string name="wash1tarif_key">Тариф1</string>
+    <string name="wash2tarif_key">Тариф2</string>
+    <string name="wash3tarif_key">Тариф3</string>
+    <string name="wash4tarif_key">Тариф4</string>
+    <string name="wash5tarif_key">Тариф5</string>
+    <string name="wash6tarif_key">Тариф6</string>
+    <string name="wash7tarif_key">Тариф7</string>
+    <string name="wash8tarif_key">Тариф8</string>
+    <string name="wash9tarif_key">Тариф9</string>
+    <string name="wash10tarif_key">Тариф10</string>
+    <string name="wash11tarif_key">Тариф11</string>
+    <string name="wash12tarif_key">Тариф12</string>
+
+    <string name="modetarif_key">Тарифы по режимам</string>
+    <string name="modetarif_title_key">Тарифы по режимам</string>
+    <string name="mode1tarif_key">Тариф по режиму 1</string>
+    <string name="mode2tarif_key">Тариф по режиму 2</string>
+    <string name="mode3tarif_key">Тариф по режиму 3</string>
+    <string name="mode4tarif_key">Тариф по режиму 4</string>
+    <string name="mode5tarif_key">Тариф по режиму 5</string>
+    <string name="mode6tarif_key">Тариф по режиму 6</string>
+
+    <string name="hourtarif_key">Тарифы по времени</string>
+    <string name="hour1tarif_title_key">Тарифы по времени 1</string>
+    <string name="hour1_key">hour1_key</string>
+    <string name="hour1_key_title">Временная зона 1</string>
+    <string name="hour1tarif_key">hour1tarif_key</string>
+    <string name="hour1tarif_key_title">Тариф</string>
+
+    <string name="hour2tarif_title_key">Тарифы по времени 2</string>
+    <string name="hour2_key">hour2_key</string>
+    <string name="hour2_key_title">Временная зона 2</string>
+    <string name="hour2tarif_key">hour2tarif_key</string>
+    <string name="hour2tarif_key_title">Тариф</string>
+
+    <string name="hour3tarif_title_key">Тарифы по времени 3</string>
+    <string name="hour3_key">hour3_key</string>
+    <string name="hour3_key_title">Временная зона 3</string>
+    <string name="hour3tarif_key">hour3tarif_key</string>
+    <string name="hour3tarif_key_title">Тариф</string>
+
+
+
+    <string name="smsnumber_client_title">Номер телефона</string>
+    <string name="smsnumber_client_default">+7</string>
+    <string name="smsnumber_client1_key">smsnumber_client1_key</string>
+    <string name="smsnumber_client1_title">Укажите номер телефона</string>
+    <string name="smsnumber_client1_summary">+7</string>
+    <string name="smsnumber_client2_key">smsnumber_client2_key</string>
+    <string name="smsnumber_client2_title">+79997776655</string>
+    <string name="smsnumber_client2_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client3_key">smsnumber_client3_key</string>
+    <string name="smsnumber_client3_title">+79997776655</string>
+    <string name="smsnumber_client3_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client4_key">smsnumber_client4_key</string>
+    <string name="smsnumber_client4_title">+79997776655</string>
+    <string name="smsnumber_client4_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client5_key">smsnumber_client5_key</string>
+    <string name="smsnumber_client5_title">+79997776655</string>
+    <string name="smsnumber_client5_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client6_key">smsnumber_client6_key</string>
+    <string name="smsnumber_client6_title">+79997776655</string>
+    <string name="smsnumber_client6_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client7_key">smsnumber_client7_key</string>
+    <string name="smsnumber_client7_title">+79997776655</string>
+    <string name="smsnumber_client7_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client8_key">smsnumber_client8_key</string>
+    <string name="smsnumber_client8_title">+79997776655</string>
+    <string name="smsnumber_client8_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client9_key">smsnumber_client9_key</string>
+    <string name="smsnumber_client9_title">+79997776655</string>
+    <string name="smsnumber_client9_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client10_key">smsnumber_client10_key</string>
+    <string name="smsnumber_client10_title">+79997776655</string>
+    <string name="smsnumber_client10_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client11_key">smsnumber_client11_key</string>
+    <string name="smsnumber_client11_title">+79997776655</string>
+    <string name="smsnumber_client11_summary">Укажите номер телефона</string>
+    <string name="smsnumber_client12_key">smsnumber_client12_key</string>
+    <string name="smsnumber_client12_title">smsnumber_client12_title</string>
+    <string name="smsnumber_client12_summary">Укажите номер телефона</string>
+
+    <string name="notice_wash_title">SMS отчет</string>
+    <string name="notice_wash_summary">Получить при завершении стирки</string>
+    <string name="smsclient_notice_msg_key">smsclient_notice_msg_key</string>
+    <string name="smsclient_notice_msg_title">Стирка завершена, хорошего дня!</string>
+
+    <string name="notice_wash1_key">notice_wash1_key</string>
+    <string name="notice_wash2_key">notice_wash2_key</string>
+    <string name="notice_wash3_key">notice_wash3_key</string>
+    <string name="notice_wash4_key">notice_wash4_key</string>
+    <string name="notice_wash5_key">notice_wash5_key</string>
+    <string name="notice_wash6_key">notice_wash6_key</string>
+    <string name="notice_wash7_key">notice_wash7_key</string>
+    <string name="notice_wash8_key">notice_wash8_key</string>
+    <string name="notice_wash9_key">notice_wash9_key</string>
+    <string name="notice_wash10_key">notice_wash10_key</string>
+    <string name="notice_wash11_key">notice_wash11_key</string>
+    <string name="notice_wash12_key">notice_wash12_key</string>
+
+    <string name="notice_wash1_summaryOn">Включено</string>
+    <string name="notice_wash1_summaryOff">Отключено</string>
+    <string name="notice_wash2_summaryOn">Включено</string>
+    <string name="notice_wash2_summaryOff">Отключено</string>
+    <string name="notice_wash3_summaryOn">Включено</string>
+    <string name="notice_wash3_summaryOff">Отключено</string>
+    <string name="notice_wash4_summaryOn">Включено</string>
+    <string name="notice_wash4_summaryOff">Отключено</string>
+    <string name="notice_wash5_summaryOn">Включено</string>
+    <string name="notice_wash5_summaryOff">Отключено</string>
+    <string name="notice_wash6_summaryOn">Включено</string>
+    <string name="notice_wash6_summaryOff">Отключено</string>
+    <string name="notice_wash7_summaryOn">Включено</string>
+    <string name="notice_wash7_summaryOff">Отключено</string>
+    <string name="notice_wash8_summaryOn">Включено</string>
+    <string name="notice_wash8_summaryOff">Отключено</string>
+    <string name="notice_wash9_summaryOn">Включено</string>
+    <string name="notice_wash9_summaryOff">Отключено</string>
+    <string name="notice_wash10_summaryOn">Включено</string>
+    <string name="notice_wash10_summaryOff">Отключено</string>
+    <string name="notice_wash11_summaryOn">Включено</string>
+    <string name="notice_wash11_summaryOff">Отключено</string>
+    <string name="notice_wash12_summaryOn">Включено</string>
+    <string name="notice_wash12_summaryOff">Отключено</string>
+
+    <string name="settings_timemode_title">Установка режимов</string>
+    <string name="namemode1_key">namemode1_key</string>
+    <string name="name1mode_key">name1mode_key</string>
+    <string name="name1mode_title">Быстрая</string>
+    <string name="time1mode_key">time1mode_key</string>
+    <string name="time1mode_title">30</string>
+
+    <string name="namemode2_key">namemode2_key</string>
+    <string name="name2mode_key">name2mode_key</string>
+    <string name="name2mode_title">Интенсивная</string>
+    <string name="time2mode_key">time2mode_key</string>
+    <string name="time2mode_title">120</string>
+
+    <string name="namemode3_key">namemode3_key</string>
+    <string name="name3mode_key">name3mode_key</string>
+    <string name="name3mode_title">Хлопок</string>
+    <string name="time3mode_key">time3mode_key</string>
+    <string name="time3mode_title">180</string>
+
+    <string name="namemode4_key">namemode4_key</string>
+    <string name="name4mode_key">name4mode_key</string>
+    <string name="name4mode_title">Шерсть</string>
+    <string name="time4mode_key">time4mode_key</string>
+    <string name="time4mode_title">90</string>
+
+    <string name="namemode5_key">namemode5_key</string>
+    <string name="name5mode_key">name5mode_key</string>
+    <string name="name5mode_title">Синтетика</string>
+    <string name="time5mode_key">time5mode_key</string>
+    <string name="time5mode_title">110</string>
+
+    <string name="namemode6_key">namemode6_key</string>
+    <string name="name6mode_key">name6mode_key</string>
+    <string name="name6mode_title">Полоскание</string>
+    <string name="time6mode_key">time6mode_key</string>
+    <string name="time6mode_title">17</string>
+
+
+    <string name="btn_ok">Ok</string>
+    <string name="txt_layout_prapair_title">Тариф</string>
+
+
+    <string name="set_program_key">set_program_key</string>
+    <string name="set_program_title">Уровень автоматизации прачечной</string>
+    <string name="set_program_summary">Устанавливает стиль управления машинами</string>
+    <string name="set_program_dialogTitle">Выберите уровень автоматизации</string>
+
+    <string name="set_program_dryer_key">set_program_dryer_key</string>
+    <string name="set_program_dryer_title">Автоматизация сушильной машины</string>
+    <string name="set_program_dryer_summary">Устанавливает стиль управления сушильными машинами</string>
+    <string name="set_program_dryer_dialogTitle">Выберите уровень автоматизации сушильных машин</string>
+
+
+    <string name="systembar_key">Системная панель</string>
+    <string name="systembar_summaryOff">Системные кнопки отображены - защита отключена</string>
+    <string name="systembar_summaryOn">Cистемная панель навигации скрыта</string>
+    <string name="systembar_switchTextOff">Нет</string>
+    <string name="systembar_switchTextOn">Да</string>
+
+    <string name="display_light">Яркость экрана</string>
+
+    <string name="dozattor1_key">dozattor1_key</string>
+    <string name="dozator2_key">dozator2_key</string>
+    <string name="dozator3_key">dozator3_key</string>
+    <string name="dozator4_key">dozator4_key</string>
+
+    <string name="washsetting_title_key">Настройки машин</string>
+    <string name="bigscreen_key">Настройка дисплея</string>
+    <string name="bigscreen_key_off">Сенсорный дисплей 7"</string>
+    <string name="bigscreen_key_on">Сенсорный дисплей 10"</string>
+
+    <!--Названия диалогового окна указывается в манифесте, начнем называть -->
+    <string name="settings_title_sms_admin">Настройка СМС доступа - Администратор</string>
+    <string name="settings_title_sms_director">Настройка СМС доступа - Директор</string>
+    <string name="settings_title_sms_polomka">Настройка СМС отчетов - Поломка</string>
+    <string name="settings_title_sms_client">SMS отчеты</string>
+
+    <string name="sms_manager_number_key_title">Телефон администратора</string>
+    <string name="sms_manager_number_key_summary">Минимальное управление терминалом</string>
+    <string name="sms_manager_number_key_value">+7</string>
+    <string name="sms_manager_number_key_dialogTitle">Введите номер обязательно через +7</string>
+    <string name="sms_manager_number_key">Телефон администратора</string>
+    <string name="sms_manager_notice_key">sms_manager_notice_key</string>
+    <string name="sms_manager_notice_doorError_key">sms_manager_notice_doorError_key</string>
+    <string name="sms_manager_notice_startOK_key">sms_manager_notice_startOK_key</string>
+    <string name="sms_manager_notice_timeError_key">sms_manager_notice_timeError_key</string>
+    <string name="sms_manager_notice_220v_key">sms_manager_notice_220v_key</string>
+
+    <string name="sms_director_number_key_title">Телефон директора</string>
+    <string name="sms_director_number_key_summary">Максимальное управление терминалом</string>
+    <string name="sms_director_number_key_value">+7</string>
+    <string name="sms_director_number_key_dialogTitle">Введите номер обязательно через +7</string>
+    <string name="sms_director_number_key">Телефон директора</string>
+    <string name="sms_director_notice_key">sms_director_notice_key</string>
+    <string name="sms_director_notice_doorError_key">sms_director_notice_doorError_key</string>
+    <string name="sms_director_notice_startOK_key">sms_director_notice_startOK_key</string>
+    <string name="sms_director_notice_timeError_key">sms_director_notice_timeError_key</string>
+    <string name="sms_director_notice_220v_key">sms_director_notice_220v_key</string>
+
+
+    <string name="smsclient_key">smsclient_key</string>
+    <string name="smsclient_title">Оповещение клиентов</string>
+    <string name="smsclient_summary">Отчет об окончании стирки</string>
+    <string name="smsclient_dialogTitle">СМС клиентам</string>
+
+    <string name="washisdry_key">Установка сушки</string>
+    <string name="washerisdry_key">Установка сушки</string>
+    <string name="wash1isdry_key_title">Машина №1</string>
+    <string name="wash2isdry_key_title">Машина №2</string>
+    <string name="wash3isdry_key_title">Машина №3</string>
+    <string name="wash4isdry_key_title">Машина №4</string>
+    <string name="wash5isdry_key_title">Машина №5</string>
+    <string name="wash6isdry_key_title">Машина №6</string>
+    <string name="wash7isdry_key_title">Машина №7</string>
+    <string name="wash8isdry_key_title">Машина №8</string>
+    <string name="wash9isdry_key_title">Машина №9</string>
+    <string name="wash10isdry_key_title">Машина №10</string>
+    <string name="wash11isdry_key_title">Машина №11</string>
+    <string name="wash12isdry_key_title">Машина №12</string>
+    <string name="wash1isdry_key">wash1isdry_key</string>
+    <string name="wash2isdry_key">wash2isdry_key</string>
+    <string name="wash3isdry_key">wash3isdry_key</string>
+    <string name="wash4isdry_key">wash4isdry_key</string>
+    <string name="wash5isdry_key">wash5isdry_key</string>
+    <string name="wash6isdry_key">wash6isdry_key</string>
+    <string name="wash7isdry_key">wash7isdry_key</string>
+    <string name="wash8isdry_key">wash8isdry_key</string>
+    <string name="wash9isdry_key">wash9isdry_key</string>
+    <string name="wash10isdry_key">wash10isdry_key</string>
+    <string name="wash11isdry_key">wash11isdry_key</string>
+    <string name="wash12isdry_key">wash12isdry_key</string>
+
+
+    <string name="checkwater_key">checkwater_key</string>
+    <string name="checkwater_summary_off">Проверка воды в машине - Откл</string>
+    <string name="checkwater_summary_on">Предлагать слить воду - Вкл</string>
+
+    <string name="sberbank_key">sberbank_key</string>
+
+    <string name="remont_key">Ремонт машины</string>
+    <string name="remont1_key">remont1_key</string>
+    <string name="remont2_key">remont2_key</string>
+    <string name="remont3_key">remont3_key</string>
+    <string name="remont4_key">remont4_key</string>
+    <string name="remont5_key">remont5_key</string>
+    <string name="remont6_key">remont6_key</string>
+    <string name="remont7_key">remont7_key</string>
+    <string name="remont8_key">remont8_key</string>
+    <string name="remont9_key">remont9_key</string>
+    <string name="remont10_key">remont10_key</string>
+    <string name="remont11_key">remont11_key</string>
+    <string name="remont12_key">remont12_key</string>
+
+    <string name="licence_key">licence_key</string>
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Основные настройки</string>
+
+    <string name="pref_title_social_recommendations">Настройка системной панели навигации Android</string>
+    <string name="pref_description_social_recommendations">Показать копки навигации</string>
+
+    <string name="pref_title_display_name">Введите код лицензии после полной оплаты по договору поставки</string>
+    <string name="pref_default_display_name">Licence key 2016</string>
+
+    <string name="pref_title_add_friends_to_messages">Выберите количество машин</string>
+    <string-array name="pref_example_list_titles">
+        <item>Одна</item>
+        <item>Две</item>
+        <item>Три</item>
+        <item>Четыре</item>
+        <item>Пять</item>
+        <item>Шесть</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="systemsettings">Base settings</string>
+    <string name="Log">Log.e</string>
+    <string name="com">COM</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="system_title_txt">Система</string>
+    <string name="btn_settings_bluetooth_name">Search laundry</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="sber_info">Этот номер синхронизирован с терминалом и пополнив его, оплата моментально отобразится на терминале.</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen2">FullscreenActivity2</string>
+
+</resources>

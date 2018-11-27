@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+       <EditTextPreference
+        android:key="@string/licence_key"
+        android:title="Код лицензии"
+        android:summary="Ввести"
+        android:dialogTitle="Напишите код"
+        android:defaultValue="code"
+        android:lines="1" />
+</PreferenceScreen>

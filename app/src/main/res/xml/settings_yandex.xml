@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen android:layout="@layout/yandex_logo"/>
+    // ЯНДЕКС ДЕНЬГИ
+    <PreferenceCategory
+        android:title="@string/yandexmenu_title"
+        android:icon="@drawable/ic_notifications_black_24dp">
+        <!-- Безналичка Яндекс.Деньги -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/creditcard_key"
+            android:title="@string/creditcard_title" />
+
+        <!-- Куда переводить платежи по безналу -->
+        <EditTextPreference
+            android:key="@string/creditcardnumber_key"
+            android:title="@string/creditcardnumber_title"
+            android:summary="@string/creditcardnumber_summary"
+            android:defaultValue="1004 1234 3456 7894 234"
+            android:dialogTitle="@string/creditcardnumber_dialogTitle" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

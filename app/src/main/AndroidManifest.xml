@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.laundromat.washer.bluetoothchat">
+
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.QUICKBOOT_POWERON" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS" />
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="false">
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.KioskModeDemo"
+            android:label="@string/app_name" >
+
+        </activity>
+        <receiver
+            android:name="ru.laundromat.washer.bluetoothchat.AdminReceiver"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.Sber_instruct"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.BattaryStatus"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <!--
+                <receiver android:name=".PowerConnectionReceiver">
+                    <intent-filter>
+                        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                    </intent-filter>
+                </receiver>
+                <receiver android:name=".BatteryLevelReceiver"
+                    android:enabled="true"
+                    android:exported="false">
+                    <intent-filter>
+                        <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                        <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+                    </intent-filter>
+                </receiver>
+        -->
+
+        <service
+            android:name="ru.laundromat.washer.bluetoothchat.MyKeyboard"
+            android:label="@string/my_keyboard"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="ru.laundromat.washer.bluetoothchat.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ru.laundromat.washer.bluetoothchat.RemoteControlReceiver2">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer"
+            android:label="@string/settings_title_machines"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer1"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer2"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer3"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer4"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer5"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer6"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer7"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer8"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer9"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer10"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer11"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_washer12"
+            android:label="@string/settings_title_machines1"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_manager"
+            android:label="@string/settings_title_sms_admin"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_director"
+            android:label="@string/settings_title_sms_director"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_error_door"
+            android:label="@string/settings_title_sms_polomka"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_error_volts"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_start_OK"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_number_sber"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_licence"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice1"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice2"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice3"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice4"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice5"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice6"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice7"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice8"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice9"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice10"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice11"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_notice12"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_sms_client"
+            android:label="@string/settings_title_sms_client"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_bluetooth_base"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_machine"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_mode"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_name"
+            android:label="@string/settings_timemode_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_time"
+            android:label="@string/hourtarif_key"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_sber"
+            android:label="@string/settings_timemode_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_qiwi"
+            android:label="@string/settings_timemode_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_valuta"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_valuta"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_tarif_yandex"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_system"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_system_dozator"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_dozator1"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_dozator2"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_dozator3"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_dozator4"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.PrefActivity_dozator"
+            android:label="@string/settings_title"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:screenOrientation="reverseLandscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+        <activity
+            android:name="ru.laundromat.washer.bluetoothchat.FullscreenActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen2"
+            android:theme="@style/FullscreenTheme"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+            <EditTextPreference
+                android:key="@string/hour1tarif_key"
+                android:title="@string/hour1tarif_key_title"
+                android:icon="@drawable/valuta_logo2"
+                android:defaultValue="0"
+                android:numeric="decimal"
+                android:lines="1"
+                android:dialogTitle="Установите тариф" />
+        <ListPreference
+            android:key="@string/hour1_key"
+            android:title="0"
+            android:icon="@drawable/icon_clock"
+            android:defaultValue="1"
+            android:negativeButtonText="Отмена"
+            android:positiveButtonText="Ок"
+            android:entries="@array/hour1_style"
+            android:entryValues="@array/hour1_style_values"
+            android:dialogTitle="Период времени" />
+        <EditTextPreference
+            android:key="@string/hour2tarif_key"
+            android:title="@string/hour2tarif_key_title"
+            android:icon="@drawable/valuta_logo2"
+            android:defaultValue="0"
+            android:numeric="decimal"
+            android:lines="1"
+            android:dialogTitle="Установите тариф" />
+
+        <ListPreference
+            android:key="@string/hour2_key"
+            android:title="0"
+            android:icon="@drawable/icon_clock"
+            android:defaultValue="1"
+            android:negativeButtonText="Отмена"
+            android:positiveButtonText="Ок"
+            android:entries="@array/hour2_style"
+            android:entryValues="@array/hour2_style_values"
+            android:dialogTitle="Период времени" />
+        <EditTextPreference
+            android:key="@string/hour3tarif_key"
+            android:title="@string/hour3tarif_key_title"
+            android:icon="@drawable/valuta_logo2"
+            android:defaultValue="0"
+            android:numeric="decimal"
+            android:lines="1"
+            android:dialogTitle="Установите тариф" />
+
+
+</PreferenceScreen>

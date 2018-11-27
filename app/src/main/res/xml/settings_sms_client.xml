@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- СМС отчет об окончании стирки
+    <ListPreference
+        android:key="@string/smsclient_key"
+        android:title="@string/smsclient_title"
+        android:summary="@string/smsclient_summary"
+        android:icon="@drawable/icon_valuta3"
+        android:defaultValue="1"
+      android:negativeButtonText="Отмена"
+      android:positiveButtonText="Ок"
+      android:entries="@array/smsclient_style"
+      android:entryValues="@array/smsclient_style_values"
+      android:dialogTitle="@string/smsclient_dialogTitle" />-->
+    <PreferenceCategory
+        android:title="@string/smsclient_title"
+        android:summary="@string/smsclient_summary">
+        <SwitchPreference
+            android:key="@string/smsclient_key"
+            android:title="@string/smsclient_title"
+            android:defaultValue="false"
+            android:summaryOff="@string/notice_wash1_summaryOff"
+            android:summaryOn="@string/notice_wash1_summaryOn"
+            android:switchTextOff="@string/notice_wash1_summaryOff"
+            android:switchTextOn="@string/notice_wash1_summaryOn" />
+        <!-- Сообщение СМС отчета-->
+        <EditTextPreference
+            android:key="@string/smsclient_notice_msg_key"
+            android:title="@string/smsclient_notice_msg_title"
+            android:summary="Редактировать"
+            android:defaultValue="@string/smsclient_notice_msg_title"
+            android:dialogTitle="@string/smsclient_dialogTitle"
+            android:dependency="@string/smsclient_key"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

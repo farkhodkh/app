@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Настройка" >
+        <!-- Тип устройства -->
+        <ListPreference
+            android:key="@string/dozator4_key"
+            android:title="Время работы в секундах"
+            android:summary="Изменить"
+            android:defaultValue="1"
+            android:entries="@array/dozator4_delay"
+            android:entryValues="@array/dozator4_delay_values"
+            android:dialogTitle="Настройка подключенного устройства" />
+    </PreferenceCategory>
+</PreferenceScreen>

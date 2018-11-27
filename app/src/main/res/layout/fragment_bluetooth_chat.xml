@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_bg"
+        android:visibility="visible"
+        android:gravity="center"
+        android:background="@color/colorControlActivatedHalf">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewScaleHome" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_start_anim"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/ok1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="521dp"
+            android:layout_height="696dp"
+            android:id="@+id/start_anim_washer"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="matrix" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/programs_start_clother"
+            android:layout_marginTop="282dp"
+            android:scaleType="matrix"
+            android:layout_marginLeft="170dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_bt_not"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/img_fullscreen_search_bluetooth"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:clickable="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_bt_search"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/connecting_animation"
+            android:src="@drawable/error_connecting_info_animation"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_home"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Для начала работы"
+            android:id="@+id/homeText1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="150dp"
+            android:textSize="25sp"
+            android:visibility="visible"
+            android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="нажмите Ок   "
+            android:id="@+id/homeText2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="97dp"
+            android:textSize="34sp"
+            android:textColor="#ffffff"
+            android:visibility="visible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:id="@+id/homeText3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="230dp"
+            android:layout_marginRight="90dp"
+            android:textSize="50sp"
+            android:textColor="#ffffff"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:layout_width="210dp"
+            android:layout_height="120dp"
+            android:id="@+id/button"
+            android:background="@drawable/button_start"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/icon_btn_ok"
+            android:duplicateParentState="false" />
+
+        <ImageButton
+            android:layout_width="210dp"
+            android:layout_height="120dp"
+            android:id="@+id/button3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="30dp"
+            android:duplicateParentState="false"
+            android:background="@drawable/wash_ready_background"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_number_selected"
+    android:visibility="gone"
+    android:clickable="false">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_washer"
+        android:layout_marginTop="85dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="visible">
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:id="@+id/img_slide_back"
+            android:src="@drawable/icon_button_slide_back_mini"
+            android:background="@drawable/button_start"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Выберите № машины"
+            android:id="@+id/txt_number_selected_title"
+            android:textColor="#ffffff"
+            android:textSize="55sp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            style="@style/Widget.SampleMessageTileMy2" />
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:id="@+id/img_slide"
+            android:background="@drawable/button_start"
+            android:src="@drawable/icon_button_slide_mini"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="360dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_washer"
+        android:visibility="visible"
+        android:clickable="false">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="360dp"
+                android:id="@+id/horizontalScrollView" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:id="@+id/machine1">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash1"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash1_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num1" />
+
+                            <ImageView
+                                android:id="@+id/wash1"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry1"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+
+                            <ImageView
+                                android:id="@+id/dozator1"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="gone"
+                                android:background="@drawable/tide75"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:id="@+id/machine2">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash2"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash2_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num2"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/wash2"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible"  />
+
+                            <ImageView
+                                android:id="@+id/imageDoor2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry2"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+
+                            <ImageView
+                                android:id="@+id/dozator2"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="gone"
+                                android:background="@drawable/tide150"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine3">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash3"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash3_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num3"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/wash3"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry3"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                            <ImageView
+                                android:id="@+id/dozator3"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="gone"
+                                android:background="@drawable/tide75"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine4">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash4"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash4_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num4"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/wash4"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor4"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry4"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/beko_dcu" />
+                            <ImageView
+                                android:id="@+id/dozator4"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="gone"
+                                android:background="@drawable/tide150"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine5">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash5"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash5_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num5"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash5"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor5"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry5"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/beko_dcu" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine6">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash6"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash6_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="false"
+                                android:background="@drawable/num6"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash6"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor6"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry6"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/beko_dcu" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine7">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash7"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash7_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num7"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash7"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor7"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry7"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine8">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash8"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash8_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num8"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash8"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible"  />
+
+                            <ImageView
+                                android:id="@+id/imageDoor8"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry8"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine9">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash9"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash9_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num9"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash9"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor9"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry9"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine10">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash10"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash10_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num10"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash10"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor10"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry10"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine11">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash11"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash11_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num11"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash11"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor11"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry11"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/machine12">
+
+                        <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash12"
+                            android:layout_margin="1dp">
+
+                            <Button
+                                android:id="@+id/wash12_go"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="false"
+                                android:background="@drawable/num12"
+                                android:visibility="visible" />
+
+
+
+
+                            <ImageView
+                                android:id="@+id/wash12"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imageDoor12"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="157dp"
+                                android:background="@drawable/clother"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:id="@+id/dry12"
+                                android:layout_width="170dp"
+                                android:layout_height="270dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="6dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_choose_mode"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/choose1mode"
+            android:layout_width="330dp"
+            android:layout_height="290dp"
+            android:background="#00ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/choose2mode"
+            android:layout_width="330dp"
+            android:layout_height="290dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:background="#00ffffff" />
+
+        <Button
+            android:id="@+id/choose3mode"
+            android:layout_width="330dp"
+            android:layout_height="290dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#00ffffff" />
+
+        <Button
+            android:id="@+id/choose4mode"
+            android:layout_width="330dp"
+            android:layout_height="260dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginBottom="30dp"
+            android:background="#00ffffff" />
+
+        <Button
+            android:id="@+id/choose5mode"
+            android:layout_width="330dp"
+            android:layout_height="260dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_marginBottom="30dp"
+            android:background="#00ffffff" />
+
+        <Button
+            android:id="@+id/choose6mode"
+            android:layout_width="330dp"
+            android:layout_height="260dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginBottom="30dp"
+            android:background="#00ffffff" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/layout_prepair_start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background1"
+            android:visibility="visible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background2"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background3"
+            android:visibility="visible">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode1"
+            android:visibility="invisible">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode2"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode3"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode4"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode5"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_mode6"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_dry1"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prepair_background_remont1"
+            android:longClickable="false"
+            android:visibility="invisible" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout1"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img_background_text"
+                android:background="@drawable/background_text"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ТАРИФ"
+                android:id="@+id/txt_layout_prepair_wash1"
+                android:textSize="100sp"
+                android:textColor="#fed948"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="100dp"
+                style="@style/Widget.SampleMessageTileMy" />
+
+            <TextView
+                android:id="@+id/wash_mode"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="400dp"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="65sp"
+                android:textStyle="bold"  />
+
+            <TextView
+                android:id="@+id/money_tarif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="100sp"
+                android:typeface="normal"
+                android:layout_marginLeft="150dp"
+                android:gravity="center_horizontal"
+                android:layout_centerVertical="true"
+                android:textAlignment="gravity"
+                style="@style/Widget.SampleMessageTileMy" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/start"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Start"
+                android:gravity="clip_vertical|right"
+                android:textSize="80sp"
+                android:drawableRight="@drawable/smart_keyboard_icon_start"
+                android:background="@drawable/button_start"
+                android:layout_marginRight="50dp"
+                android:textColor="#ffffff"
+                android:textAlignment="gravity"
+                android:visibility="visible"
+                style="@style/Widget.SampleMessageTileMy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="руб"
+                android:id="@+id/money_tarif_valuta"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/money_tarif"
+                android:textColor="#ffffff"
+                android:textSize="50dp"
+                android:textStyle="normal"
+                android:gravity="bottom"
+                android:layout_marginLeft="10dp"
+                style="@style/Widget.SampleMessageTileMy" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/icon_clock"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Внимание! Перед оплатой включите машину."
+                android:id="@+id/txt_footer_prepair"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_alignParentBottom="false"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_marginLeft="10dp"
+                style="@style/Widget.SampleMessageTileMy" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textMsg1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:textSize="50dp"
+                android:background="#ffffff" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/layout_smart_keyboard"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/img_smart_keyboard_fon"
+                android:background="#00ff9900"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:id="@+id/btn_cancel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_home_white_48dp"
+                android:visibility="visible"
+                android:background="#e1ffbb33" />
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="115dp"
+                android:id="@+id/btn_numbers_select"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btn_cancel"
+                android:src="@drawable/ic_local_laundry_service_white_48dp"
+                android:visibility="visible"
+                android:background="#e1ffbb33" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_keyboard_choose_prog"
+                android:src="@drawable/ic_collections_white_48dp"
+                android:layout_toRightOf="@+id/btn_numbers_select"
+                android:layout_toLeftOf="@+id/btn_keyboard_sms"
+                android:visibility="visible"
+                android:background="#e1ffbb33" />
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_keyboard_sms"
+                android:src="@drawable/ic_notifications_none_white_48dp"
+                android:layout_centerHorizontal="true"
+                android:minWidth="120dp"
+                android:layout_height="115dp"
+                android:background="#e1ffbb33" />
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="115dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_keyboard_temp"
+                android:layout_toRightOf="@+id/btn_keyboard_sms"
+                android:src="@drawable/ic_insert_chart_white_48dp"
+                android:visibility="visible"
+                android:background="#e1ffbb33"
+                android:layout_alignParentEnd="false" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_keyboard_pay"
+                android:src="@drawable/ic_attach_money_white_48dp"
+                android:layout_toLeftOf="@+id/btn_keyboard_creditcard"
+                android:layout_toRightOf="@+id/btn_keyboard_temp"
+                android:background="#e1ffbb33" />
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="115dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_keyboard_creditcard"
+                android:src="@drawable/ic_credit_card_white_48dp"
+                android:layout_alignParentRight="true"
+                android:background="#e1ffbb33"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:id="@+id/layout_action_bar"
+        android:visibility="visible"
+        android:background="#b70581ce">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_wash"
+            android:src="@drawable/action_bar_icon_wash"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="false" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_electro"
+            android:src="@drawable/action_bar_icon_electro"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_battary"
+            android:src="@drawable/action_bar_icon_battary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/wash_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="false"
+            android:clickable="false"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="65sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:layout_toRightOf="@+id/img_action_bar_icon_wash"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|top"
+            android:textAlignment="gravity"
+            android:layout_marginTop="-7dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_vneseno"
+            android:src="@drawable/action_bar_icon_vneseno"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/money_kup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="0"
+            android:textColor="#ff3333"
+            android:textSize="68sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:gravity="right|top"
+            android:layout_alignParentBottom="false"
+            android:layout_toLeftOf="@+id/img_action_bar_icon_vneseno"
+            android:layout_marginRight="5dp"
+            android:textAlignment="gravity"
+            android:layout_marginTop="-10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_laundry_connected"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_lost_connected"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_action_bar_icon_not_connected"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/layout_settings">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_tarif"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_tarif_icon_title"
+                android:background="@drawable/settings_menu_icon_title_tarif"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Основные настройки"
+                android:id="@+id/btn_settings_tarif_base"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_settings_base3"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/img_settings_tarif_icon_title"
+                android:layout_alignBottom="@+id/img_settings_tarif_icon_title"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Валюта"
+                android:id="@+id/btn_settings_tarif_valuta"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_valuta3"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_settings_tarif_base"
+                android:layout_marginTop="30dp"
+                android:contextClickable="false" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Тарифы"
+                android:id="@+id/btn_settings_tarif_wash"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_tarif_wash6"
+                android:layout_toRightOf="@+id/btn_settings_tarif_yandex"
+                android:layout_alignBottom="@+id/btn_settings_tarif_valuta"
+                android:layout_marginLeft="45dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Безналичная оплата"
+                android:id="@+id/btn_settings_tarif_yandex"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_creditcard"
+                android:layout_below="@+id/btn_settings_tarif_valuta"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Цены по режимам"
+                android:id="@+id/btn_settings_tarif_mode"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_tarif_mode1"
+                android:layout_toRightOf="@+id/btn_settings_tarif_yandex"
+                android:layout_alignBottom="@+id/btn_settings_tarif_yandex"
+                android:layout_marginLeft="45dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Цены по утюгам"
+                android:id="@+id/btn_settings_tarif_iron"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_tarif_iron2"
+                android:layout_toRightOf="@+id/btn_settings_tarif_yandex"
+                android:layout_alignBottom="@+id/btn_settings_tarif_sber"
+                android:layout_marginLeft="45dp"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Назвать режимы"
+                android:id="@+id/btn_settings_mode_name"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_washer_mode"
+                android:layout_toRightOf="@+id/btn_settings_tarif_yandex"
+                android:layout_alignBottom="@+id/btn_settings_tarif_iron"
+                android:layout_marginLeft="45dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Мобильный Сбербанк"
+                android:id="@+id/btn_settings_tarif_sber"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_pay_online"
+                android:layout_below="@+id/btn_settings_tarif_yandex"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Тариф по времени"
+                android:id="@+id/btn_settings_tarif_qiwi"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_sms_client"
+                android:layout_below="@+id/btn_settings_tarif_sber"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_bluetooth"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_bluetooth_background"
+                android:background="@drawable/settings_menu_icon_title_bluetooth"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:layout_alignParentTop="true"
+                android:visibility="visible" />
+
+            <ToggleButton
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:id="@+id/btn_settings_bluetooth_adapter"
+                android:text="Bluetooth Adapter  включен"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_bt"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/btn_settings_bluetooth_base"
+                android:layout_centerHorizontal="true"
+                android:textOff="Bluetooth Adapter  OFF "
+                android:textOn="Bluetooth Adapter  ON" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Основные настройки"
+                android:id="@+id/btn_settings_bluetooth_base"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_settings_base3"
+                android:layout_toRightOf="@+id/img_settings_bluetooth_background"
+                android:layout_alignBottom="@+id/img_settings_bluetooth_background"
+                android:layout_marginLeft="50dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:id="@+id/btn_settings_bluetooth_search"
+                android:text="Connect to Default"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_search_bt"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/btn_settings_bluetooth_adapter"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:id="@+id/btn_settings_bluetooth_list"
+                android:text="List &amp; Search Device"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_list_bt"
+                android:layout_below="@+id/btn_settings_bluetooth_search"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_iron"
+            android:visibility="invisible">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Coming soon"
+                android:id="@+id/btn_settings_iron_base"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:layout_toRightOf="@+id/img_settings_iron_background"
+                android:layout_alignBottom="@+id/img_settings_iron_background"
+                android:layout_marginLeft="50dp"
+                android:contextClickable="false"
+                android:drawableLeft="@drawable/icon_market2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_iron_background"
+                android:layout_alignParentBottom="false"
+                android:background="@drawable/settings_menu_icon_title_iron"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:id="@+id/iron_view1"
+                android:background="@drawable/iron"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:id="@+id/iron_view2"
+                android:background="@drawable/iron"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/iron_view1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="275dp"
+                android:id="@+id/iron_view3"
+                android:background="@drawable/iron"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/iron_view2"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_sms"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_sms_background"
+                android:background="@drawable/settings_menu_icon_title_sms"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:layout_alignParentTop="true" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Основные настройки"
+                android:id="@+id/btn_settings_sms_base"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_settings_base3"
+                android:layout_toRightOf="@+id/img_settings_sms_background"
+                android:layout_alignBottom="@+id/img_settings_sms_background"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Директор"
+                android:id="@+id/btn_settings_sms_director"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_settings_sms_base"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_number_director"
+                android:layout_marginTop="30dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Менеджер"
+                android:id="@+id/btn_settings_sms_manager"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_number_director"
+                android:layout_below="@+id/btn_settings_sms_base"
+                android:layout_toRightOf="@+id/btn_settings_sms_director"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="30dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="СМС при поломке"
+                android:id="@+id/btn_settings_sms_otchet_admin"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/settings_base_icon"
+                android:layout_below="@+id/btn_settings_sms_manager"
+                android:layout_toRightOf="@+id/btn_settings_sms_director"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Отчеты о запусках"
+                android:id="@+id/btn_settings_sms_otchet_start_washer"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_tarif_wash6"
+                android:layout_below="@+id/btn_settings_sms_otchet_admin"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Уведомления клиентов"
+                android:id="@+id/btn_settings_sms_otchet_client"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_sms_client"
+                android:layout_marginLeft="45dp"
+                android:layout_below="@+id/btn_settings_sms_otchet_start_washer"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Отчет ОТКЛ электросети"
+                android:id="@+id/btn_settings_sms_otchet_power"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_power"
+                android:layout_below="@+id/btn_settings_sms_otchet_admin"
+                android:layout_toRightOf="@+id/btn_settings_sms_director"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="СМС команды"
+                android:id="@+id/btn_settings_sms_read_command"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_sms2"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/btn_settings_sms_director" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_system"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_system_background"
+                android:layout_alignParentBottom="false"
+                android:background="@drawable/settings_menu_icon_title_system"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Основные настройки"
+                android:id="@+id/btn_settings_system_base"
+                android:drawableLeft="@drawable/icon_settings_base3"
+                android:visibility="invisible"
+                android:background="@drawable/button_custom"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/img_settings_system_background"
+                android:layout_alignBottom="@+id/img_settings_system_background" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="LOG.e"
+                android:id="@+id/btn_settings_system_log_view"
+                android:visibility="visible"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/img_settings_system_background"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Program.COM"
+                android:id="@+id/btn_settings_system_com"
+                android:background="@drawable/button_custom"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/btn_settings_system_log_view"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icon_com" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Display Light"
+                android:id="@+id/btn_settings_system_display"
+                android:background="@drawable/button_custom"
+                android:layout_below="@+id/btn_settings_system_com"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icon_display_light" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="@string/upgrade"
+                android:id="@+id/btn_settings_system_destroy_upgrade"
+                android:visibility="invisible"
+                android:background="@drawable/button_custom"
+                android:layout_marginRight="30dp"
+                android:layout_alignBottom="@+id/img_settings_system_background"
+                android:layout_toLeftOf="@+id/img_settings_system_background"
+                android:drawableLeft="@drawable/icon_upgrade" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Keyboard"
+                android:id="@+id/btn_settings_system_keyboard"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_settings_system_display"
+                android:background="@drawable/button_custom"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/icon_keyboard" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Auto Start"
+                android:id="@+id/btn_settings_system_autostart"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/btn_settings_system_log_view"
+                android:layout_alignBottom="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_autostart" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Date Settings"
+                android:id="@+id/btn_settings_system_autoreboot"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/btn_settings_system_log_view"
+                android:layout_alignBottom="@+id/btn_settings_system_com"
+                android:drawableLeft="@drawable/icon_sms_client" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Full Screen"
+                android:id="@+id/btn_settings_system_fullscreen"
+                android:visibility="visible"
+                android:background="@drawable/button_custom"
+                android:layout_marginLeft="45dp"
+                android:layout_alignBottom="@+id/btn_settings_system_display"
+                android:layout_toRightOf="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_fullscreen" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Camera"
+                android:id="@+id/btn_settings_system_camera"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:layout_alignBottom="@+id/btn_settings_system_log_view"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_camera" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Battary Status"
+                android:id="@+id/btn_settings_system_battary"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:layout_alignBottom="@+id/btn_settings_system_com"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_battery" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Доп. опции"
+                android:id="@+id/btn_settings_system_optionsplus"
+                android:visibility="visible"
+                android:background="@drawable/button_custom"
+                android:layout_alignBottom="@+id/btn_settings_system_display"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_market2" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Block Calls"
+                android:id="@+id/btn_settings_system_blockcalls"
+                android:visibility="visible"
+                android:background="@drawable/button_custom"
+                android:layout_marginLeft="45dp"
+                android:layout_alignBottom="@+id/btn_settings_system_keyboard"
+                android:layout_toRightOf="@+id/btn_settings_system_log_view"
+                android:drawableLeft="@drawable/icon_block_call" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Лицензия"
+                android:id="@+id/btn_settings_system_licence"
+                android:visibility="visible"
+                android:background="@drawable/button_custom"
+                android:layout_alignBottom="@+id/btn_settings_system_keyboard"
+                android:drawableLeft="@drawable/icon_number_admin"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/btn_settings_system_log_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_system_log"
+                android:visibility="visible">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_log"
+                android:background="#000000"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="false">
+
+                <ListView
+                    android:id="@+id/in"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close"
+                    android:id="@+id/btn_close_layout_com"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="48dp"
+                    android:background="@drawable/button_custom"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_stat"
+            android:visibility="invisible">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_stat_icon_title"
+                android:background="@drawable/settings_menu_icon_title_stat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Экспорт в Excel"
+                android:id="@+id/btn_settings_stat_inkass"
+                android:layout_marginLeft="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_inkass"
+                android:layout_alignBottom="@+id/img_settings_stat_icon_title"
+                android:layout_toRightOf="@+id/img_settings_stat_icon_title"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_washer"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_washer_background"
+                android:layout_alignParentBottom="false"
+                android:background="@drawable/settings_menu_icon_title_wash"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:text="Основные настройки"
+                android:id="@+id/btn_settings_washer_base"
+                android:background="@drawable/button_custom"
+                android:drawableLeft="@drawable/icon_settings_base3"
+                android:layout_toRightOf="@+id/img_settings_washer_background"
+                android:layout_alignBottom="@+id/img_settings_washer_background"
+                android:layout_marginLeft="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="360dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_settings_wash_number"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="360dp"
+                    android:id="@+id/horizontalScrollView2">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine1_settings">
+
+                            <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash1_settings"
+                            android:layout_margin="1dp"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num1_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num1"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash1_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:visibility="invisible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/dry1_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="5dp" />
+
+                                <ImageView
+                                    android:id="@+id/dozator1_settings"
+                                    android:layout_width="170dp"
+                                    android:layout_height="270dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="false"
+                                    android:visibility="invisible"
+                                    android:background="@drawable/tide75"
+                                    android:layout_marginBottom="6dp" />
+
+                                <ListView
+                                android:id="@+id/StatisticWash1"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp"
+                                android:smoothScrollbar="true"  />
+
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine2_settings">
+
+                            <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash2_settings"
+                            android:layout_margin="1dp"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num2_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num2"
+                                android:visibility="visible" />
+
+
+
+                                <ImageView
+                                android:id="@+id/wash2_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="invisible"  />
+
+                            <ImageView
+                                android:id="@+id/dry2_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginBottom="5dp" />
+
+                                <ImageView
+                                    android:id="@+id/dozator2_settings"
+                                    android:layout_width="170dp"
+                                    android:layout_height="270dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="false"
+                                    android:visibility="invisible"
+                                    android:background="@drawable/tide150"
+                                    android:layout_marginBottom="6dp" />
+
+                                <ListView
+                                android:id="@+id/StatisticWash2"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine3_settings">
+
+                            <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash3_settings"
+                            android:layout_margin="1dp"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num3_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num3"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash3_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry3_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+                                <ImageView
+                                    android:id="@+id/dozator3_settings"
+                                    android:layout_width="170dp"
+                                    android:layout_height="270dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="false"
+                                    android:visibility="invisible"
+                                    android:background="@drawable/tide75"
+                                    android:layout_marginBottom="6dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash3"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine4_settings">
+
+                            <RelativeLayout
+                            android:layout_width="169dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash4_settings"
+                            android:layout_margin="1dp"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num4_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num4"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash4_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry4_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+                                <ImageView
+                                    android:id="@+id/dozator4_settings"
+                                    android:layout_width="170dp"
+                                    android:layout_height="270dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="false"
+                                    android:visibility="invisible"
+                                    android:background="@drawable/tide150"
+                                    android:layout_marginBottom="6dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash4"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp"
+                                android:scrollingCache="true"
+                                android:smoothScrollbar="true" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine5_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash5_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num5_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num5"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash5_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry5_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash5"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine6_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash6_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num6_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="false"
+                                android:background="@drawable/num6"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash6_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry6_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="3dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash6"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginBottom="4dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine7_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash7_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num7_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num7"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash7_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry7_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash7"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="2dp"
+                                android:smoothScrollbar="true"
+                                android:scrollingCache="true"
+                                android:textAlignment="gravity" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine8_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash8_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num8_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num8"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash8_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry8_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="3dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash8"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:stackFromBottom="true"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine9_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash9_settings"
+                                android:visibility="visible">
+                            <Button
+                                android:id="@+id/num9_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num9"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/wash9_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry9_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+                            <ListView
+                                android:id="@+id/StatisticWash9"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:stackFromBottom="true"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine10_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash10_settings"
+                                android:visibility="visible">
+                                <Button
+                                    android:id="@+id/num10_settings"
+                                    android:layout_width="170dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/num10"
+                                    android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash10_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+
+                            <ImageView
+                                android:id="@+id/dry10_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="3dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash10"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:stackFromBottom="true"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine11_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash11_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num11_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/num11"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash11_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry11_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash11"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:stackFromBottom="true"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout></LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/machine12_settings">
+
+                            <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/layout_wash12_settings"
+                                android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/num12_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentRight="false"
+                                android:background="@drawable/num12"
+                                android:visibility="visible" />
+
+
+
+                            <ImageView
+                                android:id="@+id/wash12_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/dry12_settings"
+                                android:layout_width="170dp"
+                                android:layout_height="275dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:background="@drawable/beko_dcu"
+                                android:visibility="visible"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp" />
+
+                            <ListView
+                                android:id="@+id/StatisticWash12"
+                                android:layout_width="160dp"
+                                android:layout_height="270dp"
+                                android:stackFromBottom="true"
+                                android:transcriptMode="alwaysScroll"
+                                android:background="#b5fcfbfb"
+                                android:layout_gravity="left|top"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp" />
+                        </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_preview"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn1_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn2_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn3_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn4_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn5_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn6_settings_choose"
+                android:layout_width="330dp"
+                android:layout_height="290dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/wash_ready_background"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:id="@+id/layout_settings_action_bar"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_view_leftmenu"
+                android:background="@drawable/settings_menu_action_bar_icon_view_leftmenu"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:id="@+id/btn_settings_save"
+                android:background="#00ffffff"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_battary"
+                android:src="@drawable/action_bar_icon_battary"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="false"
+                android:layout_toLeftOf="@+id/statistics_txt"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_electro"
+                android:src="@drawable/action_bar_icon_electro"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="false"
+                android:layout_toLeftOf="@+id/statistics_txt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_smsstatus"
+                android:background="@drawable/settings_menu_action_bar_icon_smsstatus"
+                android:layout_toLeftOf="@+id/img_settings_action_bar_icon_valuta"
+                android:layout_marginRight="40dp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_valuta"
+                android:background="@drawable/settings_menu_action_bar_icon_valuta"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_settings_action_bar_icon_allcashsum"
+                android:background="@drawable/settings_menu_action_bar_icon_allcashsum"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/statistics_txt"
+                android:textStyle="bold"
+                android:textSize="68dp"
+                android:textColor="#ffffff"
+                android:layout_toLeftOf="@+id/valuta_statistics_txt"
+                android:layout_marginRight="15dp"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:layout_marginTop="-10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUB"
+                android:id="@+id/valuta_statistics_txt"
+                android:textSize="48dp"
+                android:textColor="#ffffff"
+                android:layout_toLeftOf="@+id/img_settings_action_bar_icon_allcashsum"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:layout_alignBottom="@+id/statistics_txt"
+                android:layout_marginBottom="7dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_settings_action_bar_leftmenu"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView84"
+                android:src="@drawable/settings_menu_left_background20"
+                android:scaleType="matrix" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nav_header_height"
+                android:background="@drawable/side_nav_bar"
+                android:orientation="vertical"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageView75"
+                    android:background="@drawable/logotip"
+                    android:layout_marginLeft="40dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="40dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/txt_support"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="40dp"
+                    android:paddingBottom="10dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_settings_buttons"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="167dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu1"
+                    android:visibility="invisible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_washer"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_marginTop="170dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu2"
+                    android:visibility="visible"
+                    android:layout_below="@+id/txt_opacity_menu1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="-2dp"
+                    android:autoText="false" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_iron"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_washer"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="-5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu3"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/txt_opacity_menu2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="-2dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_sms"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_iron"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="-3dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu4"
+                    android:visibility="invisible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/txt_opacity_menu3"
+                    android:layout_marginTop="1dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_bluetooth"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_sms"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu5"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/txt_opacity_menu4"
+                    android:layout_alignParentLeft="true" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_tarif"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_bluetooth"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu6"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/txt_opacity_menu5"
+                    android:layout_alignParentLeft="true" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_system"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_tarif"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu7"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/txt_opacity_menu6"
+                    android:layout_alignParentLeft="true" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_stat"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btn_settings_system" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="#a500bafe"
+                    android:id="@+id/txt_opacity_menu8"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/txt_opacity_menu7" />
+
+                <Button
+                    android:layout_width="329dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_settings_exit"
+                    android:background="#00ffffff"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/btn_settings_stat"
+                    android:layout_marginTop="-5dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_block"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/fragmenttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:id="@+id/edit_text_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:editable="false"
+            android:enabled="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/img_block_touch_bags"
+        android:layout_alignParentBottom="true"
+        android:background="#00ffffff"
+        android:clickable="false"
+        android:visibility="visible"
+        android:focusable="false"
+        android:longClickable="false" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/img_block_touch_bags2"
+        android:layout_alignParentTop="true"
+        android:background="#00ffffff"
+        android:clickable="false"
+        android:visibility="visible"
+        android:focusable="false"
+        android:longClickable="false" />
+
+</RelativeLayout>

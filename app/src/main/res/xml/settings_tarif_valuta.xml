@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:layout="@layout/valuta_logo"/>
+    <!-- Валюта -->
+    <ListPreference
+        android:key="@string/valuta_key"
+        android:title="@string/valuta_title"
+        android:summary="@string/valuta_summary"
+        android:icon="@drawable/icon_valuta3"
+        android:defaultValue="1"
+      android:negativeButtonText="Отмена"
+      android:positiveButtonText="Ок"
+      android:entries="@array/valuta_style"
+      android:entryValues="@array/valuta_style_values"
+      android:dialogTitle="@string/valuta_dialogTitle" />
+    <PreferenceCategory
+        android:title="Россия"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <EditTextPreference
+        android:key="@string/valuta_kup_rub_key"
+        android:title="RUB купюроприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="10"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="RUB купюроприемник" />
+    <EditTextPreference
+        android:key="@string/valuta_mon_rub_key"
+        android:title="RUB монетоприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="10"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="RUB монетоприемник" /></PreferenceCategory>
+    <PreferenceCategory
+        android:title="Евросоюз"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <EditTextPreference
+        android:key="@string/valuta_kup_eur_key"
+        android:title="EUR купюроприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="5"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="EUR купюроприемник" />
+    <EditTextPreference
+        android:key="@string/valuta_mon_eur_key"
+        android:title="EUR монетоприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="1"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="EUR монетоприемник" /></PreferenceCategory>
+    <PreferenceCategory
+        android:title="Белорусия"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <EditTextPreference
+        android:key="@string/valuta_kup_byr_key"
+        android:title="BYR купюроприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="1000"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="BYR купюроприемник" />
+    <EditTextPreference
+        android:key="@string/valuta_mon_byr_key"
+        android:title="BYR монетоприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="1000"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="BYR монетоприемник" /></PreferenceCategory>
+    <PreferenceCategory
+        android:title="Казакхстан"
+        android:icon="@drawable/ic_notifications_black_24dp">
+    <EditTextPreference
+        android:key="@string/valuta_kup_kzt_key"
+        android:title="KZT купюроприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="100"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="KZT купюроприемник" />
+    <EditTextPreference
+        android:key="@string/valuta_mon_kzt_key"
+        android:title="KZT монетоприемник"
+        android:summary="Укажите номинал равный импульсу"
+        android:defaultValue="100"
+        android:numeric="decimal"
+        android:lines="1"
+        android:dialogTitle="KZT монетоприемник" />
+     </PreferenceCategory>
+</PreferenceScreen>

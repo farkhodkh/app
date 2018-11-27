@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Настройка машины"
+        android:icon="@drawable/ic_notifications_black_24dp">
+        <!-- Тип устройства -->
+        <ListPreference
+            android:key="@string/wash6isdry_key"
+            android:title="Тип машины"
+            android:summary="Стиральная машина"
+            android:defaultValue="1"
+            android:entries="@array/machine6_type"
+            android:entryValues="@array/machine6_type_value"
+            android:dialogTitle="Настройка подключенного устройства" />
+        <!-- Текущее состояние -->
+        <ListPreference
+            android:key="@string/remont6_key"
+            android:title="Текущее состояние"
+            android:summary="Редактировать"
+            android:defaultValue="2"
+            android:entries="@array/remont6_status"
+            android:entryValues="@array/remont6_status_value"
+            android:dialogTitle="Текущее состояние" />
+    </PreferenceCategory>
+    <!-- Проверка датчиков -->
+    <PreferenceCategory
+        android:title="Проверка датчиков"
+        android:icon="@drawable/ic_sync_black_24dp">
+        <SwitchPreference
+            android:title="Датчик двери"
+            android:key="@string/checkdoor_key"
+            android:defaultValue="true"
+            android:summaryOff="Нет данных"
+            android:summaryOn="Подключено" />
+        <SwitchPreference
+            android:title="Датчик воды"
+            android:key="@string/checkwater_key"
+            android:summaryOff="Нет данных"
+            android:summaryOn="Подключено"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

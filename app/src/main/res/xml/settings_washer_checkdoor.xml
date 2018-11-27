@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!-- Проверка дверцы машинок -->
+        <SwitchPreference
+            android:key="@string/checkdoor_key"
+            android:defaultValue="true"
+            android:summaryOff="@string/checkdoor_summary_off"
+            android:summaryOn="@string/checkdoor_summary_on"
+            android:switchTextOff="Нет"
+            android:switchTextOn="Да" />
+
+
+</PreferenceScreen>

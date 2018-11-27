@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:layout="@layout/sms_control_logo"/>
+<PreferenceScreen
+    android:title="СМС отчет: doorError">
+    <PreferenceCategory
+        android:title="СМС отчет: doorError">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_director_notice_doorError_key"
+            android:title="СМС Директору"
+            android:summary="Настроить"
+            android:icon="@drawable/icon_valuta3" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_manager_notice_doorError_key"
+            android:title="СМС Менеджеру"
+            android:summary="Настроить"
+            android:icon="@drawable/icon_valuta3" />
+    </PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen
+    android:title="СМС отчет: waterError">
+    <PreferenceCategory
+        android:title="СМС отчет: waterError"
+        android:summary="Остановка с водой" >
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_director_notice_timeError_key"
+            android:title="СМС Директору"
+            android:summary="Настроить"
+            android:icon="@drawable/icon_valuta3" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sms_manager_notice_timeError_key"
+            android:title="СМС Менеджеру"
+            android:summary="Настроить"
+            android:icon="@drawable/icon_valuta3" />
+    </PreferenceCategory>
+</PreferenceScreen>
+</PreferenceScreen>
